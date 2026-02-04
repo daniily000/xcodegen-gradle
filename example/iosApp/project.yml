@@ -1,0 +1,9 @@
+name: iosApp
+options:
+  bundleIdPrefix: com.daniily.gradle.xcodegen.example
+targets:
+  iosApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources: [iosApp]
