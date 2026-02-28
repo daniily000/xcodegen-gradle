@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.daniily.gradle.xcodegen"
-version = "0.0.1"
+version = "0.0.2"
 
 gradlePlugin {
     website = "https://github.com/daniily000/xcodegen-gradle"
@@ -19,5 +19,11 @@ gradlePlugin {
             tags = listOf("xcodegen",  "ios", "kmp", "kotlin multiplatform",)
             implementationClass = "com.daniily.gradle.xcodegen.XcodegenPlugin"
         }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
