@@ -55,8 +55,8 @@ Gradle.
 
 ### XcodeGen version
 
-By default, the applied plugin downloads the exact XcodeGen version, which is latest at the time of
-the plugin release. Use `version` property to use the exact XcodeGen version:
+`runXcodegen` downloads the XcodeGen version that was current when this plugin was released.
+Use the `version` property to select another version:
 
 ```kotlin
 xcodegen {
@@ -64,7 +64,8 @@ xcodegen {
 }
 ```
 
-The requested version will be downloaded into the `build` folder of your _root_ project.
+The download runs in the `downloadXcodegen` task, which `runXcodegen` depends on. The tool is
+extracted into that module's `build` directory.
 
 ### project.yml configuration
 

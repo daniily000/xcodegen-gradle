@@ -1,12 +1,14 @@
 package com.daniily.gradle.xcodegen
 
+import org.gradle.api.provider.Property
 import javax.inject.Inject
 
 abstract class XcodegenExtension
 @Inject constructor(
     val name: String,
 ) {
-    var version: String = "2.44.1"
+    abstract val version: Property<String>
+
     // language="yaml"
-    var config: String? = null
+    abstract val config: Property<String>
 }
